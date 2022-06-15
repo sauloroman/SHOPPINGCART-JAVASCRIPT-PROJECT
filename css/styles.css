@@ -177,6 +177,7 @@
 
 .form fieldset {
   border: none;
+  background-color: var(--white);
 }
 
 .form__grid {
