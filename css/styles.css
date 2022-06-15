@@ -177,7 +177,6 @@
 
 .form fieldset {
   border: none;
-  background-color: var(--white);
 }
 
 .form__grid {
@@ -196,6 +195,7 @@
 
 .form__field input,
 .form__field select {
+  background-color: var(--white);
   font-family: inherit;
   color: inherit;
   width: 90%;
