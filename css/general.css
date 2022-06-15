@@ -1,0 +1,368 @@
+:root {
+  --color-red: #EB4A5A; 
+  --color-red-shade: #76252D;
+  --color-red-tint: #F5A5AD;
+  --color-white: #F9FAFC;
+  --color-gray-light: #F6F3F3;
+  --color-gray-dark: #434343;
+  --color-blue: #274671;
+  --color-blue-dark: #172A44;
+  --white: #FFF;
+  --black: #000;
+  --general-gap: 5rem;
+ }
+ 
+ *,
+ *::before,
+ *::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+ }
+
+ *::selection {
+  background-color: var(--color-red);
+  color: var(--white);
+ }
+ 
+ html {
+  overflow-x: hidden;
+  font-size: 50%;
+ }
+ 
+ body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  color: var(--color-gray-dark);
+  line-height: 1.7;
+  background-color: var(--color-gray-light);
+  position: relative;
+ }
+ 
+ a {
+   display: inline-block;
+   text-decoration: none;
+ }
+ 
+ img {
+   max-width: 100%;
+   display: block;
+ }
+ 
+ ul {
+   list-style: none;
+ }
+ 
+ h1, h2, h3 {
+   margin: 0 0 calc( var(--general-gap) / 2) 0;
+ }
+ 
+ h1 {
+   font-size: 4rem;
+ }
+ 
+ h2 {
+   font-size: 3rem;
+ }
+ 
+ h3 {
+   font-size: 2rem;
+ }
+ 
+ /* #################################### */
+ /* RESUABLE CLASSES */
+ /* #################################### */
+ .container {
+   width: 120rem;
+   max-width: 95%;
+   margin: 0 auto;
+ }
+ 
+ .btn:link,
+ .btn:visited {
+   background-color: var(--color-red);
+   color: var(--white);
+   padding: 1.2rem 2.4rem;
+   width: 25rem;
+   font-weight: 700;
+   transition: all .4s;
+ }
+ 
+ .btn:hover,
+ .btn:active {
+   background-color: var(--color-red-shade);
+ }
+ 
+.btn--white:link,
+.btn--white:visited {
+  background-color: var(--white);
+  color: var(--color-blue);
+  border: 1px solid currentColor;
+}
+ 
+.btn--white:hover,
+.btn--white:active {
+  background-color: var(--color-red-shade);
+  color: var(--white);
+}
+
+ .icon__Box {
+    display: flex;
+    justify-content: flex-end;
+ }
+
+ a .icon {
+  color: var(--color-gray-dark);
+ }
+ 
+ .icon {
+   font-size: 4rem;
+   cursor: pointer;
+   transition: all .4s;
+ }
+ 
+ .icon:hover {
+   color: var(--black);
+ }
+
+.icon--bag:hover {
+  color: var(--color-red);
+}
+
+.icon--pay {
+  font-size: 8rem;
+  color: #40c057;
+  margin-bottom: calc( var(--general-gap) / 2);
+}
+
+ .alert {
+  position: fixed;
+  z-index: 99999;
+  bottom: 10vh;
+  left: -100%;
+  box-shadow: .5rem 1rem 2rem rgba(0,0,0,.2);
+  padding: 1rem 3rem;
+  text-align: center;
+  color: var(--white);
+  transition: all 1s ease-in;
+ }
+
+ .alert--danger {
+  background-color: var(--color-red);
+ }
+
+ .alert--success {
+  background-color: var(--color-blue);
+ }
+
+ .show-alert {
+  left: 10vh;
+ }
+
+ .section-space {
+  padding: 5rem 0;
+ }
+ 
+ /* #################################### */
+ /* RESUABLE COMPONENTS */
+ /* #################################### */
+ .header {
+   height: 9.6rem;
+   margin: 0 auto;
+   background-color: var(--color-gray-light);
+   padding: 1rem 0;
+   width: 120rem;
+   max-width: 95%;
+ }
+ 
+ .header__container {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
+ 
+ .header__logoBox {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+ }
+ 
+ .header__logo {
+   height: 8rem;
+ }
+ 
+ .header__text {
+   font-size: 1.8rem;
+   font-weight: 900;
+ }
+ 
+.shopping-cart {
+  position: fixed;
+  top: 0;
+  right: -110%;
+  width: 30%;
+  height: 100%;
+  z-index: 9999;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.25 );
+  background-color: var(--color-gray-light);
+  padding: 2rem;
+  transition: all .4s ease-out;
+}
+
+.show-cart {
+  right: 0;
+}
+
+.results {
+  overflow-y: scroll;
+  height: 45rem;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: calc(var(--general-gap) / 2);
+  margin-bottom: calc(var(--general-gap) / 2);
+}
+
+.cart__cleanBox {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+
+.cart__clean {
+  font-weight: 700;
+  color: var(--color-red);
+  border: none;
+  transition: all .4s;
+}
+
+.cart__clean:hover,
+.cart__clean:active {
+  color: var(--color-red-shade);
+}
+
+.cart {
+  height: auto;
+  padding: 2rem;
+}
+
+.cart__product {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc( var(--general-gap) / 2);
+  margin-bottom: var(--general-gap);
+  padding-bottom: 2rem;;
+}
+
+.cart__product:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.cart__imageBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart__image {
+  width: 80%;
+}
+
+.cart__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cart__title,
+.cart__size {
+  font-size: 2rem;
+}
+
+.cart__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart__amountBox {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.minus,
+.plus {
+  padding: .5rem 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: all .4s;
+}
+
+.minus:hover,
+.plus:hover {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.cart__amount {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.cart__subtotalBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--general-gap);
+}
+
+.cart__price {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.returnBox {
+  display: flex;
+  gap: calc( var(--general-gap) / 2);
+  align-items: center;
+  margin-bottom: var(--general-gap);
+}
+
+.return__text {
+  font-weight: 700;
+  color: var(--color-gray-dark);
+}
+
+.footer {
+  margin-top: 5rem;
+  padding: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ddd;
+}
+
+.footer__logos {
+  display: flex;
+  gap: 3rem;
+}
+
+/* #################################### */
+/* HIDDEN ELEMENTS AT DIFFERENT PAGES */
+/* #################################### */
+.product-page div {
+  display: none;
+}
+
+
+/* #################################### */
+/* UTILITY CLASSES */
+/* #################################### */
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}

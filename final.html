@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PROJECT FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet"> 
+
+  <!-- PROJECT STYLES -->
+  <link rel="stylesheet" href="/css/general.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/queries.css" />
+
+  <title>Ecommerce &mdash; Academlo</title>
+</head>
+<body>
+  
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__container">
+      <div class="header__logoBox">
+        <img src="/img/Academlo.svg" alt="Academlo logo" class="header__logo">
+        <p class="header__text">Academlo</p>
+      </div>
+      <div class="products-pay"> 
+        <ion-icon name="cart-outline" class="icon" id="cartBtn"></ion-icon>
+      </div>
+    </div>
+  </header>
+
+  <!-- CARRITO DE COMPRAS -->
+  <div class="shopping-cart" id="cart">
+    <div class="icon__Box">
+      <ion-icon id="closeBtn" name="close-outline" class=" icon"></ion-icon>
+    </div>
+    <h3>Carrito de compras</h3>
+
+    <div class="cart__cleanBox">
+      <a href="#" class="cart__clean" id="cleanBtn">Vaciar carrito</a>
+    </div>
+
+    <div class="results">
+      <ul class="cart" id="cart__list">
+        <!-- JS INJECTION -->
+  
+      </ul>
+    </div>
+
+    <div class="cart__subtotalBox">
+      <p class="cart__subtotal">Subtotal: </p>
+      <p class="cart__price" id="cartPrice">$0.00</p>
+    </div>
+
+    <div class="text-center">
+      <a href="product-result.html" class="btn text-center" id="btnBuy">Comprar productos</a>
+    </div>
+
+  </div>
+
+  <main class="container">
+
+    <section class="section__pay section-space">
+      <div class="pay__iconBox">
+        <ion-icon name="checkmark-circle-outline" class="icon--pay"></ion-icon>
+        <p class="pay__text text-center">
+          Tu compra se ha realizado con éxito, se ha <br> enviado tu resumen de compra a tu correo <br> <strong> y tu carrito ha sido vaciado.</strong>
+        </p>
+      </div>
+    </section>
+
+    <section class="section-space">
+      <h2>Tu compra: </h2>
+      <div class="productsFinal__grid" id="productsFinal__grid">
+      </div>
+    </section>
+
+    <section class="section-summary">
+      <h2>Resumen del pedido</h2>
+
+      <ul class="summary__list">
+        <li class="summary__item">
+          <p>Subtotal General: </p>
+          <p id="subtotal__general">$265.00</p>
+        </li>
+        <li class="summary__item">
+          <p>Envío: </p>
+          <p>$99.99</p>
+        </li>
+        <li class="summary__item">
+          <p>Total: </p>
+          <p id="total">$365.00</p>
+        </li>
+      </ul>
+
+      <div class="section-space text-center">
+        <a href="/index.html" class="btn btn--white text-center" id="btnFin" >Regresar a carrito</a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ELEMENTS NOT USED -->
+  <div class="products-pay">
+    <div id="products-container"></div> 
+    <div id="btnDown"></div>
+    <div id="productsToShow"></div>
+    <div id="subtotal"></div>
+    <div id="btnFin"></div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- MY SCRIPTS -->
+  <script src="/js/data.js" type="module"></script>
+  <script src="/js/selectors.js" type="module"></script>
+  <script src="/js/generalFunctions.js" type="module"></script>
+  <script src="/js/shoppingCart.js" type="module"></script>
+  <script src="/js/productsSummay.js" type="module"></script>
+  <script src="/js/finalProducts.js" type="module"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PROJECT FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet"> 
+
+  <!-- PROJECT STYLES -->
+  <link rel="stylesheet" href="/css/general.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/queries.css" />
+
+  <title>Ecommerce &mdash; Academlo</title>
+</head>
+<body>
+  
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__container">
+      <div class="header__logoBox">
+        <img src="/img/Academlo.svg" alt="Academlo logo" class="header__logo">
+        <p class="header__text">Academlo</p>
+      </div>
+      <div class="products-pay"> 
+        <ion-icon name="cart-outline" class="icon" id="cartBtn"></ion-icon>
+      </div>
+    </div>
+  </header>
+
+  <!-- CARRITO DE COMPRAS -->
+  <div class="shopping-cart" id="cart">
+    <div class="icon__Box">
+      <ion-icon id="closeBtn" name="close-outline" class=" icon"></ion-icon>
+    </div>
+    <h3>Carrito de compras</h3>
+
+    <div class="cart__cleanBox">
+      <a href="#" class="cart__clean" id="cleanBtn">Vaciar carrito</a>
+    </div>
+
+    <div class="results">
+      <ul class="cart" id="cart__list">
+        <!-- JS INJECTION -->
+  
+      </ul>
+    </div>
+
+    <div class="cart__subtotalBox">
+      <p class="cart__subtotal">Subtotal: </p>
+      <p class="cart__price" id="cartPrice">$0.00</p>
+    </div>
+
+    <div class="text-center">
+      <a href="product-result.html" class="btn text-center" id="btnBuy">Comprar productos</a>
+    </div>
+
+  </div>
+
+  <main class="container">
+
+    <a href="/index.html" class="returnBox">
+      <ion-icon name="arrow-back-outline" class="icon"></ion-icon>
+      <p class="return__text">Academlo &mdash; Tienda oficial</p>
+    </a>
+
+    <h2>Tus artículos en carrito de compras</h2>
+
+    <div class="productSummaryBox">
+      <p>Resumen del pedido</p>
+      <ion-icon name="arrow-down-outline" class="icon" id="btnDown"></ion-icon>
+    </div>
+
+    <ul class="productsToShow" id="productsToShow">
+    </ul>
+
+    <section class="section-form section-space">
+
+      <section class="section-summary">
+        <h2>Resumen del pedido</h2>
+  
+        <ul class="summary__list">
+          <li class="summary__item">
+            <p>Subtotal General: </p>
+            <p id="subtotal__general">$265.00</p>
+          </li>
+          <li class="summary__item">
+            <p>Envío: </p>
+            <p>$99.00</p>
+          </li>
+          <li class="summary__item">
+            <p>Total: </p>
+            <p id="total">$365.00</p>
+          </li>
+        </ul>
+      </section>
+    
+      <form class="section-space form__pay">
+
+        <h2>Método de pago</h2>
+
+        <fieldset class="form__grid">
+          <div class="form__field--pay">
+            <input type="radio" name="pay" id="pay">
+            <label for="pay">Tarjeta de débito y crédito</label>
+            <img src="/img/masterCardlogo.png" alt="masterCardlogo">
+          </div>
+          <div class="form__field--pay">
+            <input type="radio" name="pay" id="payPal">
+            <label for="payPal">Paypal</label>
+            <img src="/img/PaypalLogo.png" alt="PaypalLogo">
+          </div>
+        </fieldset>
+
+        <fieldset class="form__grid">
+          <div class="form__field">
+            <label for="tarjeta">Número de tarjeta</label>
+            <input type="text" id="tarjeta" placeholder="**** **** **** ****">
+          </div>
+          <div class="form__field">
+            <div>
+              <label for="fecha">Fecha de expiración</label>
+              <input type="number" id="fecha" placeholder="000">
+            </div>
+            <div>
+              <label for="cvv">CVV</label>
+              <input type="number" id="cvv" placeholder="000">
+            </div>
+          </div>
+          <div class="form__field">
+            <label for="pais">País</label>
+            <select id="pais">
+              <option value="MX">México</option>
+              <option value="CO">Colombia</option>
+              <option value="PE">Perú</option>
+              <option value="CR">Costa Rica</option>
+              <option value="EC">Ecuador</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset class="conditionsBox">
+          <input id="termsAnd" type="checkbox">
+          <label for="termsAnd">Acepto <span>Términos y Condiciones</span> y <span>Política de Privacidad</span></label>
+        </fieldset>
+
+      </form>
+
+      <div class="section-space text-center">
+        <a href="final.html" class="btn text-center">Realizar tu pedido</a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ELEMENTS NOT USED -->
+  <div class="products-pay">
+    <div id="products-container"></div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- MY SCRIPTS -->
+  <script src="/js/data.js" type="module"></script>
+  <script src="/js/selectors.js" type="module"></script>
+  <script src="/js/generalFunctions.js" type="module"></script>
+  <script src="/js/shoppingCart.js" type="module"></script>
+  <script src="/js/productsSummay.js" type="module"></script>
+
+
+</body>
+</html>

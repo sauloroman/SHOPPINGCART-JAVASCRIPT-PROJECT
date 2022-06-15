@@ -1,0 +1,315 @@
+/* ################################################## */
+/* ################################################## */
+/* INDEX */
+/* ################################################## */
+/* ################################################## */
+
+/* ############### */
+/* HERO */
+/* ############### */
+.hero {
+  height: 30rem;
+  background-color: var(--color-red);
+  position: relative;
+}
+
+.hero__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ############### */
+/* PRODUCTS */
+/* ############### */
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--general-gap);
+}
+
+.filter__select {
+  width: 20rem;
+  padding: 1.2rem 2.4rem;
+  border: 1px solid #ddd;
+  font-family: inherit;
+  font-size: 1.8rem;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: calc( var(--general-gap) / 2);
+}
+
+.product {
+  padding: 2rem;
+  border: 1px solid #ddd;
+  opacity: 1;
+  transition: all .4s;
+}
+
+.product:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.product__title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.product__size {
+  margin-bottom: 1rem;
+}
+
+.product__priceBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.product__price {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+/* ################################################## */
+/* ################################################## */
+/* CART PAY */
+/* ################################################## */
+/* ################################################## */
+
+.products-pay {
+  display: none;
+}
+
+.productSummaryBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  padding: 3rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.productSummaryBox p {
+  font-weight: 700;
+}
+
+.productsToShow {
+  display: none;
+}
+
+.show-products.productsToShow {
+  display: block;
+}
+
+.productCart {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: var(--general-gap) 0;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.05);
+}
+
+.productCart--empty {
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productCart__imageBox {
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productCart__image {
+  width: 60%;
+}
+
+.productCart__info {
+  /* border: 1px solid #ddd; */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: calc( var(--general-gap) / 3);
+  position: relative;
+}
+
+.productCart__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-red);
+}
+
+.productCart__price,
+.productCart__size,
+.productCart__amount {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.productCart__price span,
+.productCart__size span,
+.productCart__amount span {
+  font-weight: 400;
+}
+
+.productCart__logo {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  height: 5rem;
+}
+
+.productCart__subtotal {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+/* FORM */
+
+.form fieldset {
+  border: none;
+}
+
+.form__grid {
+  border: none;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: calc( var(--general-gap) * 2);
+  row-gap: var(--general-gap);
+}
+
+.form__field label {
+  display: block;
+  margin-bottom: 1rem;
+} 
+
+.form__field input,
+.form__field select {
+  font-family: inherit;
+  color: inherit;
+  width: 90%;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+}
+
+
+.form__grid--2 .form__field:nth-child(3),
+.form__grid--2 .form__field:nth-child(4) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--general-gap);
+}
+
+/* SUMMARY */
+
+.section-summary {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.summary__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: var(--general-gap);
+}
+
+.summary__item:nth-child(2){
+  background-color: var(--color-red-tint);
+  color: var(--white);
+  padding: 2rem 3rem;
+}
+
+.summary__item {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+.summary__item p {
+  font-weight: 700;
+}
+
+
+/* ################################################## */
+/* ################################################## */
+/* PRODUCTS TO PAY */
+/* ################################################## */
+/* ################################################## */
+
+.form__field--pay {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
+.form__field input[type = 'radio'] {
+  width: .1rem;
+  cursor: pointer;
+}
+
+.form__field img {
+  height: 2.4rem;
+}
+
+.form__pay .form__field:nth-child(2) {
+  display: flex;
+  gap: var(--general-gap);
+}
+
+.conditionsBox {
+  margin-top: var(--general-gap);
+  border: none;
+  display: flex;
+  gap: var(--general-gap);
+}
+
+.conditionsBox input {
+  width: 2rem;
+}
+
+.conditionsBox label span {
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+
+/* ################################################## */
+/* ################################################## */
+/* PAY */
+/* ################################################## */
+/* ################################################## */
+
+.pay__iconBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.productsFinal__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-bottom: var(--general-gap);
+}
+
+.productFinal__imageBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+}
+
+.productFinal__image {
+  width: 60%;
+}

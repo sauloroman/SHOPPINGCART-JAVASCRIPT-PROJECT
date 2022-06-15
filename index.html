@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PROJECT FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet"> 
+
+  <!-- PROJECT STYLES -->
+  <link rel="stylesheet" href="/css/general.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/queries.css" />
+
+  <title>Ecommerce &mdash; Academlo</title>
+</head>
+<body>
+  
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__container">
+      <div class="header__logoBox">
+        <img src="/img/Academlo.svg" alt="Academlo logo" class="header__logo">
+        <p class="header__text">Academlo</p>
+      </div>
+      <ion-icon name="cart-outline" class="icon" id="cartBtn"></ion-icon>
+    </div>
+  </header>
+
+  <!-- CARRITO DE COMPRAS -->
+  <div class="shopping-cart" id="cart">
+    <div class="icon__Box">
+      <ion-icon id="closeBtn" name="close-outline" class="icon"></ion-icon>
+    </div>
+    <h3>Carrito de compras</h3>
+
+    <div class="cart__cleanBox">
+      <a href="#" class="cart__clean" id="cleanBtn">Vaciar carrito</a>
+    </div>
+
+    <div class="results">
+      <ul class="cart" id="cart__list">
+        <!-- JS INJECTION -->
+  
+      </ul>
+    </div>
+
+    <div class="cart__subtotalBox">
+      <p class="cart__subtotal">Subtotal: </p>
+      <p class="cart__price" id="cartPrice">$0.00</p>
+    </div>
+
+    <div class="text-center">
+      <a href="products-pay.html" class="btn text-center" id="btnBuy">Comprar productos</a>
+    </div>
+
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="/img/Academlo.svg" alt="Academlo logo blanco" class="hero__img">
+  </section>
+
+  <main class="container">
+    <section class="section-space">
+      <div class="filter">
+        <h2>Todos nuestros productos</h2>
+        <select class="filter__select" id="select-products">
+          <option value="todos">Todos</option>
+          <option value="t-shirts">Camisas</option>
+          <option value="tenis-shoes">Tenis</option>
+          <option value="coats">Abrigos</option>
+          <option value="items">Otros</option>
+        </select>
+      </div>
+
+      <div class="products" id="products-container">
+        <!-- INSERT PRODUCTS WITH JS -->
+      </div>
+    </section>
+
+    <section class="section-space text-center">
+      <a href="#" id="btnWhite" class="btn btn--white text-center">Más productos</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__info">
+      <p>Saulo Román Santillán Nava</p>
+      <p id="year">Todos los derechos reservados &copy; <span>2022</span></p>
+    </div>
+    <div class="footer__logos">
+      <ion-icon name="logo-facebook" class="icon"></ion-icon>
+      <ion-icon name="logo-instagram" class="icon"></ion-icon>
+      <ion-icon name="logo-linkedin" class="icon"></ion-icon>
+    </div>
+  </footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- MY SCRIPTS -->
+  <script src="/js/data.js" type="module"></script>
+  <script src="/js/selectors.js" type="module"></script>
+  <script src="/js/generalFunctions.js" type="module"></script>
+  <script src="/js/filter.js" type="module"></script>
+  <script src="/js/shoppingCart.js" type="module"></script>
+
+
+</body>
+</html>
